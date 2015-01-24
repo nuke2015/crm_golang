@@ -57,7 +57,7 @@ func (this *Mongobase) Count(where interface{}) (int, error){
     query:=this.collection.Find(where)
     count,err:=query.Count()
     defer this.session.Close()
-    return int(count),err
+    return count,err
 }
 
 /**
@@ -193,11 +193,3 @@ func (this *Mongobase) dial(ip string,db string,collect string){
     // defer this.session.Close()
 }
 
-/**
- * 删除单条;
- */
-func (this *Mongobase) Remove(where interface{}) error {
-    err:=this.collection.Remove(where)
-    defer this.session.Close()
-    return err
-}
