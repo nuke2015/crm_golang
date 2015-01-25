@@ -1,0 +1,20 @@
+{{template "default/header.html" .}}
+	<div class="lead">编辑分类</div>
+	<form action="/category/update" method="post">
+	<input type="hidden" name="id" value="{{.result._id|hex}}">
+	<table class="table table-bordered">
+		<tr>
+			<td>分类名称</td>
+			<td>
+				<input type="text" name="title" value="{{.result.title}}" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="保存" class="btn btn-primary">
+				<input type="reset" value="重置" class="btn">
+			</td>
+		</tr>
+	</table>
+	</form>
+{{template "default/footer.html" .}}

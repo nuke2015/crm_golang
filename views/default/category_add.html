@@ -1,0 +1,20 @@
+{{template "default/header.html" .}}
+	<div class="lead">添加分类</div>
+	<form action="/category/insert" method="post">
+	<table class="table table-bordered">
+		<tr>
+			<td>分类名称</td>
+			<td>
+				<input type="text" name="title" class="form-control">
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<input type="submit" class="btn btn-primary" value="保存">
+				<input type="reset" class="btn" value="重置">
+			</td>
+		</tr>
+	</table>
+	</form>
+{{template "default/footer.html" .}}

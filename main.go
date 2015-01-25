@@ -9,6 +9,9 @@ import (
 func main() {
 	beego.Router("/", &controllers.MainController{},"*:Index")
 	beego.AutoRouter(&controllers.MainController{})
+	beego.AutoRouter(&controllers.CategoryController{})
+	beego.AutoRouter(&controllers.MenuController{})
+	beego.AutoRouter(&controllers.UserController{})
 	beego.AddFuncMap("hex",hex)
 	beego.Run()
 }

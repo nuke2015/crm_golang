@@ -1,0 +1,25 @@
+{{template "default/header.html" .}}
+	<div class="lead">添加文章</div>
+	<form action="/main/insert" method="post">
+	<table class="table table-bordered">
+		<tr>
+			<td>标题</td>
+			<td>
+				<input type="text" name="title" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>内容</td>
+			<td>
+				<input type="text" name="content" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="submit" class="btn btn-primary" value="保存">
+				<input type="reset" class="btn" value="重置">
+			</td>
+		</tr>
+	</table>
+	</form>
+{{template "default/footer.html" .}}

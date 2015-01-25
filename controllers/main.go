@@ -31,12 +31,12 @@ func (this *MainController) Index() {
 	pager:=NewPager(p,total,limit,"/main/index",true).ToString()
 	this.Data["Result"]=result
 	this.Data["Pager"]=pager
-	this.display("index")
+	this.display("index_index")
 }
 
 //添加文章
 func (this *MainController) Add(){
-	this.display("add")
+	this.display("index_add")
 }
 
 //添加入库
@@ -59,7 +59,7 @@ func (this *MainController) Edit(){
     result:=m.Use("article").One(where)
 	// this.dump(where)
 	this.Data["result"]=result
-	this.display("edit")
+	this.display("index_edit")
 }
 
 //添加入库
