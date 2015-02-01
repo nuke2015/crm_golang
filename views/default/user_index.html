@@ -5,13 +5,13 @@
 			<td>id</td>
 			<td>用户</td>
 			<td>分组</td>
-			<td>时间</td>
+			<td>注册时间</td>
 			<td>操作</td>
 		</tr>
 		{{range $k,$v :=.Result}}
 		<tr>
 			<td>{{$v._id|hex}}</td>
-			<td>{{$v.title}}</td>
+			<td>{{$v.username}}</td>
 			<td>{{$v.group}}</td>
 			<td>{{$v.ctime}}</td>
 			<td>

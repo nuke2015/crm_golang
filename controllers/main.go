@@ -7,7 +7,7 @@ import(
 )
 
 type MainController struct {
-	BaseController
+	AuthController
 }
 
 type article struct{
@@ -31,12 +31,12 @@ func (this *MainController) Index() {
 	pager:=NewPager(p,total,limit,"/main/index",true).ToString()
 	this.Data["Result"]=result
 	this.Data["Pager"]=pager
-	this.display("index_index")
+	this.display("main_index")
 }
 
 //添加文章
 func (this *MainController) Add(){
-	this.display("index_add")
+	this.display("main_add")
 }
 
 //添加入库
@@ -59,7 +59,7 @@ func (this *MainController) Edit(){
     result:=m.Use("article").One(where)
 	// this.dump(where)
 	this.Data["result"]=result
-	this.display("index_edit")
+	this.display("main_edit")
 }
 
 //添加入库

@@ -8,6 +8,7 @@ import (
 
 func main() {
 	beego.Router("/", &controllers.MainController{},"*:Index")
+	beego.AutoRouter(&controllers.IndexController{})
 	beego.AutoRouter(&controllers.MainController{})
 	beego.AutoRouter(&controllers.CategoryController{})
 	beego.AutoRouter(&controllers.MenuController{})

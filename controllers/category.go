@@ -7,7 +7,7 @@ import(
 )
 
 type CategoryController struct {
-	BaseController
+	AuthController
 }
 
 type category struct{

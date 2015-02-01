@@ -7,12 +7,12 @@ import(
 )
 
 type UserController struct {
-	BaseController
+	AuthController
 }
 
 type user struct{
 	Id       bson.ObjectId `json:"id"        bson:"_id,omitempty"`
-	Title    string
+	Username string
 	Password string
 	Group    string
 	Ctime    time.Time
@@ -43,7 +43,7 @@ func (this *UserController) Add(){
 //添加入库
 func (this *UserController) Insert(){
 	a:=&user{}
-	a.Title=this.GetString("title")
+	a.Username=this.GetString("username")
 	a.Password=this.GetString("password")
 	a.Group=this.GetString("group")
 	a.Ctime=time.Now()
@@ -71,7 +71,7 @@ func (this *UserController) Update(){
 	mid := m.MongoId(this.GetString("id"))
 	where:=bson.M{"_id":mid}
 
-	a:=bson.M{"title":this.GetString("title"),"content":this.GetString("content"),"password":this.GetString("password"),"group":this.GetString("group")}
+	a:=bson.M{"username":this.GetString("username"),"content":this.GetString("content"),"password":this.GetString("password"),"group":this.GetString("group")}
 	update:=bson.M{"$set":a}
 	m.Use("user").Update(where,update)
 	this.Redirect("/user/index",302)

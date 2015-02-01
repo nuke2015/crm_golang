@@ -1,28 +1,21 @@
-{{template "default/header.html" .}}
-	<div class="lead">文章管理</div>
-	<table class="table table-striped table-bordered">
-		<tr>
-			<td>id</td>
-			<td>标题</td>
-			<td>内容</td>
-			<td>时间</td>
-			<td>操作</td>
-		</tr>
-		{{range $k,$v :=.Result}}
-		<tr>
-			<td>{{$v._id|hex}}</td>
-			<td>{{$v.title}}</td>
-			<td>{{$v.content}}</td>
-			<td>{{$v.ctime}}</td>
-			<td>
-				<a href="/main/edit/?id={{$v._id|hex}}">编辑</a>
-				<a href="/main/delete/?id={{$v._id|hex}}">删除</a>
-			</td>
-		</tr>
-		{{end}}
-	</table>
-	{{str2html .Pager}}
-	<div>
-		<a href="/main/add" class="btn btn-primary">添加</a>
-	</div>
+{{template "default/header2.html" .}}
+<style>
+	.sign{
+		margin-top:10%;
+	}
+</style>
+<div class="sign container col-md-4 col-md-offset-4">
+	<h3>CRM-客户管理系统</h3>
+	<form class="form-signin" action="/index/login" method="post" >
+		<p><input type="text" name="username" class="form-control" placeholder="用户名"></p>
+		<p><input type="text" name="password" class="form-control" placeholder="密码"></p>
+		<p>
+			<input type="submit" value="确定" class="btn btn-primary">
+			<span></span>
+			<a href="/index/reg" class="btn btn-info">注册</a>
+		</p>
+	</form>
+</div>
+<br/>
+
 {{template "default/footer.html" .}}

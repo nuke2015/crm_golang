@@ -7,7 +7,7 @@ import(
 )
 
 type MenuController struct {
-	BaseController
+	AuthController
 }
 
 type menu struct{
@@ -21,17 +21,8 @@ type menu struct{
 //分类列表
 func (this *MenuController) Index() {
 	var m Mongobase
-	total,_:=m.Use("menu").Count(nil)
-	p,err:=this.GetInt("page");
-	if err!=nil || p<1{
-		p=1
-	}
-	limit:=5
-	skip:=(p-1)*limit
-	result:=m.Use("menu").Query(nil,skip,limit)
-	pager:=NewPager(p,total,limit,"/menu/index",true).ToString()
+	result:=m.Use("menu").All(nil)
 	this.Data["Result"]=result
-	this.Data["Pager"]=pager
 	this.display("menu_index")
 }
 
