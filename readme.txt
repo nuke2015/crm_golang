@@ -23,4 +23,6 @@ git clone https://github.com/go-mgo/mgo.git D:\advance\go1.6\gopath\src\gopkg.in
 问题修复:
 问题一Build fails with: use of internal package not allowed 
 go get github.com/prasmussen/google-api-go-client/googleapi/internal/uritemplates
+go get gopkg.in/mgo.v2-unstable/internal/scram
+
 
