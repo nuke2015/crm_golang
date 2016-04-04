@@ -47,7 +47,7 @@ func (this *MainController) Insert(){
 	a.Ctime=time.Now()
 	var m Mongobase
 	m.Use("article").Insert(a)
-	this.Redirect("/",302)
+	this.Redirect("/main/index",302)
 }
 
 //编辑入库
@@ -72,7 +72,7 @@ func (this *MainController) Update(){
 	a:=bson.M{"title":this.GetString("title"),"content":this.GetString("content")}
 	update:=bson.M{"$set":a}
 	m.Use("article").Update(where,update)
-	this.Redirect("/",302)
+	this.Redirect("/main/index",302)
 }
 
 //删除
@@ -82,5 +82,5 @@ func (this *MainController) Delete(){
 	mid := m.MongoId(this.GetString("id"))
 	where:=bson.M{"_id":mid}
 	m.Use("article").Remove(where)
-	this.Redirect("/",302)
+	this.Redirect("/main/index",302)
 }
