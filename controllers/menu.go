@@ -2,7 +2,7 @@ package controllers
 
 import(
 	"gopkg.in/mgo.v2/bson"
-	."crm/models"
+	."mycrm/models"
 	"time"
 )
 

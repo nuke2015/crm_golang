@@ -26,3 +26,10 @@ go get github.com/prasmussen/google-api-go-client/googleapi/internal/uritemplate
 go get gopkg.in/mgo.v2-unstable/internal/scram
 
 
+有些源用go get是安装不上的.要换一种办法,用git.
+git clone https://github.com/smartystreets/goconvey/
+git clone https://github.com/jtolds/gls.git
+git clone https://github.com/smartystreets/assertions.git
+
+
+
