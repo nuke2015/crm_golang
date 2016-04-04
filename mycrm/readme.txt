@@ -33,3 +33,5 @@ git clone https://github.com/smartystreets/assertions.git
 
 git clone https://github.com/prasmussen/google-api-go-client.git
 
+可能需要放在gopath/src下运行.
+
