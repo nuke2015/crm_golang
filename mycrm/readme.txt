@@ -31,5 +31,5 @@ git clone https://github.com/smartystreets/goconvey/
 git clone https://github.com/jtolds/gls.git
 git clone https://github.com/smartystreets/assertions.git
 
-
+git clone https://github.com/prasmussen/google-api-go-client.git
 
