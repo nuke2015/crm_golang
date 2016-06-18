@@ -1,6 +1,16 @@
 
-go1.6版本还在调试
+使用:
+bee run
+然后访问
+http://127.0.0.1:8080/index/index
+看到登陆首页
+若无用户则注册一个用户名+密码都是admin
+注意:
+必须确保mongodb连接正确,并且其中test库存在。
 
+开发环境是go1.6版本.
+
+------>
 设置gopath目录
 把%gopath%\bin加入到path
 
