@@ -48,4 +48,6 @@ git clone https://github.com/smartystreets/assertions.git
 
 git clone https://github.com/prasmussen/google-api-go-client.git
 
-可以直接在git目录直接运行,但注意要使用utf-8编码.
+在git目录直接运行,会报controller找不到,保守的方法是在gopath/src中运行.
+同时注意脚本要使用utf-8编码.
+
