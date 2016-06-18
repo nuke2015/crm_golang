@@ -48,5 +48,4 @@ git clone https://github.com/smartystreets/assertions.git
 
 git clone https://github.com/prasmussen/google-api-go-client.git
 
-可能需要放在gopath/src下运行.
-
+可以直接在git目录直接运行,但注意要使用utf-8编码.
