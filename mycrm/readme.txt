@@ -12,6 +12,9 @@ CRM基础
 作者:锋子
 email:196971567@qq.com
 
+放在gopath/src下面
+执行go get
+会自动安装依赖控件
 
 开发环境是go1.6版本.
 
