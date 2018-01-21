@@ -1,4 +1,5 @@
 
+>
 启动mongo数据库服务>添加test库
 
 拉代码
@@ -15,9 +16,6 @@ go run main.go
 然后访问
 http://127.0.0.1:8080/index/index
 
-![注册/登陆](https://github.com/nuke2015/crm_golang/blob/master/mycrm/thumb.png)
-
-![crm面板](https://github.com/nuke2015/crm_golang/blob/master/mycrm/thumb2.png)
 
 若无用户则注册一个用户名+密码都是admin
 注意:
@@ -26,3 +24,7 @@ http://127.0.0.1:8080/index/index
 CRM基础
 作者:锋子
 email:196971567@qq.com
+
+![注册/登陆](https://github.com/nuke2015/crm_golang/blob/master/mycrm/thumb.png)
+
+![crm面板](https://github.com/nuke2015/crm_golang/blob/master/mycrm/thumb2.png)
