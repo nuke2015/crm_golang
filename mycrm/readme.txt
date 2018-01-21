@@ -1,9 +1,20 @@
 
+启动mongo数据库,添加test库
+
+拉代码
+git clone https://github.com/nuke2015/crm_golang.git
+
+安装第三方依赖
+glide cc
+glide up
+
+
 使用:
-bee run
+bee run 或go run main.go
 然后访问
 http://127.0.0.1:8080/index/index
 看到登陆首页
+
 若无用户则注册一个用户名+密码都是admin
 注意:
 必须确保mongodb连接正确,并且其中test库存在。
@@ -11,46 +22,3 @@ http://127.0.0.1:8080/index/index
 CRM基础
 作者:锋子
 email:196971567@qq.com
-
-放在gopath/src下面
-执行go get
-会自动安装依赖控件
-
-开发环境是go1.6版本.
-
------->
-设置gopath目录
-把%gopath%\bin加入到path
-
-安装beego
-go get github.com/astaxie/beego
-安装bee
-go get github.com/beego/bee
-在gopath/bin目录中会有bee.exe二进制产生
-
-安装mongo中间件
-这个用不了
-go get gopkg.in/mgo.v2
-改成
-git clone https://github.com/go-mgo/mgo.git D:\advance\go1.6\gopath\src\gopkg.in\mgo.v2
-
-
-启动mongo服务监听 127.0.0.1:27017
-然后
-
-问题修复:
-问题一Build fails with: use of internal package not allowed 
-go get github.com/prasmussen/google-api-go-client/googleapi/internal/uritemplates
-go get gopkg.in/mgo.v2-unstable/internal/scram
-
-
-有些源用go get是安装不上的.要换一种办法,用git.
-git clone https://github.com/smartystreets/goconvey/
-git clone https://github.com/jtolds/gls.git
-git clone https://github.com/smartystreets/assertions.git
-
-git clone https://github.com/prasmussen/google-api-go-client.git
-
-在git目录直接运行,会报controller找不到,保守的方法是在gopath/src中运行.
-同时注意脚本要使用utf-8编码.
-

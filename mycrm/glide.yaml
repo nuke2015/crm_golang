@@ -1,0 +1,15 @@
+package: crm_golang/mycrm
+import:
+- package: github.com/astaxie/beego
+  version: ~1.9.2
+  subpackages:
+  - cache
+- package: gopkg.in/mgo.v2
+  subpackages:
+  - bson
+- package: github.com/nuke2015/crm_golang
+testImport:
+- package: github.com/smartystreets/goconvey
+  version: ~1.6.3
+  subpackages:
+  - convey
