@@ -1,19 +1,23 @@
 
-启动mongo数据库,添加test库
+启动mongo数据库服务>添加test库
 
 拉代码
 git clone https://github.com/nuke2015/crm_golang.git
 
-安装第三方依赖
+自动安装第三方依赖
 glide cc
 glide up
-
+或喜欢手动安装依赖
+请用go get
 
 使用:
-bee run 或go run main.go
+go run main.go
 然后访问
 http://127.0.0.1:8080/index/index
-看到登陆首页
+
+![注册/登陆](https://github.com/nuke2015/crm_golang/blob/master/mycrm/thumb.png)
+
+![crm面板](https://github.com/nuke2015/crm_golang/blob/master/mycrm/thumb2.png)
 
 若无用户则注册一个用户名+密码都是admin
 注意:
