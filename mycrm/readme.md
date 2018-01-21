@@ -24,6 +24,6 @@
     作者:锋子
     email:196971567@qq.com
 
-![注册/登陆](https://github.com/nuke2015/crm_golang/blob/master/mycrm/thumb.png)
+![注册/登陆](https://github.com/nuke2015/crm_golang/blob/master/mycrm/doc/login.png)
 
-![crm面板](https://github.com/nuke2015/crm_golang/blob/master/mycrm/thumb2.png)
+![crm面板](https://github.com/nuke2015/crm_golang/blob/master/mycrm/doc/thumb.png)
